@@ -1,0 +1,28 @@
+# Topic Modelling Bitcoin Twitter
+Nathan Huvelle
+
+## Abstract
+The goal of this project was to use NLP and Topic Modeling to analyze the discussion happening in a small corner of the Twittershpere called Bitcoin Twitter. I curated a list of the top 200 Bitcoin twitter accounts using the rankings on [Hive](https://hive.one/c/Bitcoin?page=1). , the results were presented in a 5 minute video presentation to my classmates and instructors at Metis.
+
+## Design
+I decided to focus on topic modeling for this project. I chose to do this instead of something like clustering because there is a lot of overlap between the topics, the topics aren't discrete. I used LSA, NMF for matrix factorization. My preferred model used NMF due to ease of interpretability.
+
+ 
+
+## Data
+The dataset contained roughly 30,000 tweets before and EDA was done. After cleaning the data I ended up with 27,737 documents. 
+
+## Algorithms
+T 
+*Model Evaluation and Selection*
+The most coherent topic model emerged using Tf-Idf vectorizer setting topics to 5. I chose Tf-Idf over CountVectorizer because the tweets varied greatly in length. Some tweets were only 1 word and some used the maximum 280 characters. Tf-Idf helps account for this whereas CountVectorizer only does total word counts. Setting min_df to 5 was a huge help for dimensionality reduction that I wasn't able do solely with text preprocessing. 
+
+##Tools
+-Tweepy and Twitter API tools for data gathering
+- Pandas, Scikit-learn, Regex, Nltk for EDA and preprocessing.
+- Scikit-learn for topic modeling 
+- Matplotlib and Wordcloud for visualisations
+- Keynote for presentation slides
+
+## Communication
+The design and results of this project were discussed in a 5 minute video presentation accompanied by Keynote slides containing visuals and the key metrics. The presentation slides are attached in this repository.
